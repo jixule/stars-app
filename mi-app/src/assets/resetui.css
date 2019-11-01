@@ -1,0 +1,118 @@
+.van-tab span {
+  font-size: 35px;
+  height: 60px;
+  line-height: 55px;
+}
+
+.van-tabs__wrap {
+  height: 60px !important;
+  background: snow;
+}
+
+/* 商品详情 */
+.goods {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .goods .goods_sction {
+    flex: 1;
+    overflow: auto;
+
+
+}
+
+.goods .van-cell-group {
+    height: 200px !important;
+
+
+
+}
+
+.goods .van-cell {
+    height: 100px !important;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px !important;
+
+}
+
+.goods .goods-title {
+    line-height: 50px;
+    font-size: 39px !important;
+}
+
+.goods .goods-price {
+    line-height: 50px;
+    font-size: 39px !important;
+}
+
+.goods .van-cell__value {
+    line-height: 50px;
+    font-size: 31px !important;
+}
+
+.goods .van-cell__value--alone {
+    height: 100px !important;
+}
+
+.goods .van-cell__title {
+    line-height: 100px;
+}*/
+
+.goods .van-goods-action-icon {
+  height: 100px;
+  width: 100px;
+  font-size: 29px !important;
+}
+
+.goods .van-goods-action-icon .van-icon {
+  font-size: 29px !important;
+}
+
+.goods_fixed .van-nav-bar {
+  height: 100px;
+}
+
+.goods .van-nav-bar__left {
+  font-size: 34px !important;
+  bottom: 35px !important;
+}
+
+.goods .van-ellipsis {
+  margin-top: 25px !important;
+  font-size: 44px !important;
+}
+
+.goods .van-icon {
+  font-size: 40px !important;
+  color: #000 !important;
+}
+
+.van-dialog {
+  height: 500px !important;
+  width: 600px !important;
+}
+
+.van-dialog__header {
+  height: 100px;
+  font-size: 40px;
+}
+
+.van-dialog__content {
+  height: 100px;
+  font-size: 40px;
+}
+
+.van-dialog__message {
+  height: 100px;
+  font-size: 40px !important;
+}
+
+.van-button--default {
+  height: 100px;
+  font-size: 40px !important;
+  margin-top: 180px !important;
+
+}
