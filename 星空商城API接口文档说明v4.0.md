@@ -1,8 +1,8 @@
-#### 接口文档
+#### 星空商城接口文档v4.0
 
-简化版的商城API接口（开发）:  http://47.98.226.107:3000/
+>  简化版的商城API接口（开发）:  http://47.98.226.107:3000/
 
-简化版的商城API接口（备用）: http://116.62.202.174:3000/ 
+>  简化版的商城API接口（备用）: http://116.62.202.174:3000/ 
 
 - 接口代理
 
@@ -83,6 +83,54 @@ headers
 return
   {
   }
+```
+
+-  根据用户 id 修改用户
+
+```
+url
+  /api/v1/users/：id
+method
+  put
+params
+  userName  用户名
+  nickName  昵称
+  avatar    头像
+headers
+  authorization Bearer token  // 需要提供jwt信息
+return
+  {
+    "_id": "5c6e953a224d199e15f12b9d",
+    "userName": "xiaoming",
+    "password": "123",
+    "nickName": "小明明",
+    "avatar": "http://l.asdllksad/asd",
+    "createdAt": "2019-02-21T12:10:34.346Z",
+    "updatedAt": "2019-02-21T12:10:34.346Z",
+    "__v": 0
+  }
+```
+
+- 手机验证码
+
+```
+url
+  /send_sms
+method
+  post
+params
+  mobile 手机号
+return
+{
+    "reason": "短信发送成功",
+    "result": {
+        "count": 1, 发送数量
+        "fee": 1, 扣除条数
+        "sid": "23d6bc4913614919a823271d820662af" /*短信ID*/
+        "vCode":随机六位数
+    },
+    "error_code": 0 /*发送成功*/
+}
 ```
 
 - 获取商品信息
@@ -352,7 +400,7 @@ return
 
 管理后台登录
 
-> 管理后台默认登录账号密码为admin,此处管理员信息的管理功能暂未实现
+> 管理后台默认登录账号密码为rootji,此处管理员信息的管理功能暂未实现
 
 ```
 url
@@ -427,7 +475,7 @@ return
   }
 ```
 
-3. 根据用户id修改用户
+3. 根据用户ID修改用户
 
 ```
 url
