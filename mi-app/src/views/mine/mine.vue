@@ -4,13 +4,13 @@
       <dl>
         <dt @click="userHandle">
           <img
-            :src="userQW?this.user.avatar:'http://img.52z.com/upload/news/image/20180308/20180308033241_32243.jpg'"
+            :src="userQW?(!this.user.avatar?'http://img.52z.com/upload/news/image/20180308/20180308033241_32243.jpg':this.user.avatar):'http://img.52z.com/upload/news/image/20180308/20180308033241_32243.jpg'"
             alt
           />
         </dt>
         <dd>
           <h2>
-            {{userQW?this.user.nickName:user.userName}}
+            {{userQW?(this.user.nickName?this.user.nickName:'星空用户'):user.userName}}
             <span
               v-show="!userQW"
               @click="$router.push({name:'login'})"
@@ -90,7 +90,7 @@
         <div class="box">
           <i class="iconfont icon-huiyuan"></i>
           <div>
-            <h2>小米会员</h2>
+            <h2>星空会员</h2>
             <span class="iconfont icon-jiantou"></span>
           </div>
         </div>
@@ -117,7 +117,7 @@
             <img src="https://s2.ax1x.com/2019/10/29/KRlWSH.png" alt />
           </i>
           <div>
-            <h2>小米之家</h2>
+            <h2>星空之家</h2>
             <span class="iconfont icon-jiantou"></span>
           </div>
         </div>
@@ -187,7 +187,6 @@ export default {
       this.userQW = true;
       const obj = await user();
       this.user = obj;
-      console.log(obj);
     } else {
       this.userQW = false;
     }

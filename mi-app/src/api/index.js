@@ -1,4 +1,4 @@
-import { get, post, del } from "../utils/request";
+import { get, post, del, put } from "../utils/request";
 /**
  * 加入购物车
  * @param {*} data
@@ -62,7 +62,6 @@ export function addAddress(data) {
  * @param {*} id
  */
 export function commodity(id) {
-  console.log(`/api/v1/products/${id}`);
   return get(`/api/v1/products/${id}`);
 }
 
@@ -78,6 +77,13 @@ export function dele(id) {
  */
 export function user() {
   return get(`/api/v1/users/info`);
+}
+/**
+ * 修改用户信息
+ */
+export function desUser(data) {
+  console.log(data)
+  return put(`/api/v1/users/${data.id}`, data);
 }
 /**
  * 获取所有收货地址

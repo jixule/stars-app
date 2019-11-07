@@ -110,12 +110,16 @@
                     class="one_title"
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
-                    <figure v-for="(v, i) in goods.length>=1?goods[0].products:''" :key="i">
+                    <figure
+                      v-for="(v, i) in goods.length>=1?goods[0].products:''"
+                      :key="i"
+                      @click="orderId"
+                    >
                       <div @click="$router.push({path:`particulars?id=${v._id}`})">
-                      <img 
-                        :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
-                      />
-                      <h6>{{v.name}}</h6>
+                        <img
+                          :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
+                        />
+                        <h6>{{v.name}}</h6>
                       </div>
                     </figure>
                   </aside>
@@ -133,10 +137,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;众筹&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=2?goods[1].products:''" :key="i">
-                      <img
-                        :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
-                      />
-                      <h6>{{v.name}}</h6>
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
+                        <img
+                          :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
+                        />
+                        <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -153,10 +159,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小爱呵护&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=3?goods[2].products:''" :key="i">
-                      <img
-                        :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
-                      />
-                      <h6>{{v.name}}</h6>
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
+                        <img
+                          :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
+                        />
+                        <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -173,10 +181,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小爱智能&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=4?goods[3].products:''" :key="i">
-                      <img
-                        :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
-                      />
-                      <h6>{{v.name}}</h6>
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
+                        <img
+                          :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
+                        />
+                        <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -193,10 +203,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;智能耳机&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=5?goods[4].products:''" :key="i">
-                      <img
-                        :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
-                      />
-                      <h6>{{v.name}}</h6>
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
+                        <img
+                          :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
+                        />
+                        <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -213,10 +225,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小爱家居&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=6?goods[5].products:''" :key="i">
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
                       <img
                         :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
                       />
                       <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -233,10 +247,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小爱百货&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=7?goods[6].products:''" :key="i">
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
                       <img
                         :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
                       />
                       <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -253,10 +269,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电动剃须&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=8?goods[7].products:''" :key="i">
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
                       <img
                         :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
                       />
                       <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -273,10 +291,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小爱快充&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=9?goods[8].products:''" :key="i">
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
                       <img
                         :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
                       />
                       <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -293,10 +313,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;路由器&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=10?goods[9].products:''" :key="i">
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
                       <img
                         :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
                       />
                       <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -313,10 +335,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时尚出行&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=11?goods[10].products:''" :key="i">
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
                       <img
                         :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
                       />
                       <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -333,10 +357,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;智能家居&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=12?goods[11].products:''" :key="i">
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
                       <img
                         :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
                       />
                       <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -353,10 +379,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;智能手环&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=13?goods[12].products:''" :key="i">
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
                       <img
                         :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
                       />
                       <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -373,10 +401,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个护健康&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=14?goods[13].products:''" :key="i">
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
                       <img
                         :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
                       />
                       <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -393,10 +423,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;智能杂物&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=15?goods[14].products:''" :key="i">
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
                       <img
                         :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
                       />
                       <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -413,10 +445,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;笔记本&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=16?goods[15].products:''" :key="i">
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
                       <img
                         :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
                       />
                       <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -433,10 +467,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;平板&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=17?goods[16].products:''" :key="i">
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
                       <img
                         :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
                       />
                       <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -453,10 +489,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;优惠专区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=18?goods[7].products:''" :key="i">
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
                       <img
                         :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
                       />
                       <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -473,10 +511,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小米手机&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=19?goods[18].products:''" :key="i">
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
                       <img
                         :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
                       />
                       <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -493,10 +533,12 @@
                   >—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;红米手机&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—</h2>
                   <aside class="liu_one">
                     <figure v-for="(v, i) in goods.length>=20?goods[19].products:''" :key="i">
+                      <div @click="$router.push({path:`particulars?id=${v._id}`})">
                       <img
                         :src="v.length!=0?v.coverImg:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/69b470df9b6a61ca62379214c2bba303.jpg?thumb=1&w=500&h=200'"
                       />
                       <h6>{{v.name}}</h6>
+                      </div>
                     </figure>
                   </aside>
                 </article>
@@ -546,7 +588,9 @@ export default {
       this.goods.push(ty);
     });
   },
-  methods: {},
+  methods: {
+    orderId() {}
+  },
   async mounted() {
     var tabItem = $(".leftList li");
     var mySwiper = new Swiper(".swiper-container", {
@@ -749,7 +793,7 @@ export default {
 .swiper-slide {
   overflow: hidden;
 }
-.swiper-container{
+.swiper-container {
   overflow: hidden;
 }
 </style>

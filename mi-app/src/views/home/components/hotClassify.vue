@@ -29,7 +29,8 @@ import { product, productList } from "../../../services/HomeGetData";
 export default {
   data() {
     return {
-      list: []
+      list: [],
+      name:''
     };
   },
   async created() {
