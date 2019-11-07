@@ -14,6 +14,10 @@
     </nav>
     <van-tabs v-model="active" :color="'#FF6900'" :title-active-color="'#FF6900'" swipeable>
       <van-tab title="全部">
+        <div class="noorder" v-if="isShows">
+          <img src="../../../public/img/noOrder.png" alt="暂无订单">
+        </div>
+        <div v-if="isShow">
         <div
           class="box"
           v-for="(v, i) in orders.length>0?orders:kList"
@@ -38,9 +42,14 @@
             </div>
           </div>
         </div>
+        </div>
       </van-tab>
       <van-tab title="代付款" dot info="2">
-        <div class="box" v-for="(v, i) in orders.length>0?orders:kList" :key="i">
+         <div class="noorder" v-if="isShows">
+          <img src="../../../public/img/noOrder.png" alt="暂无订单">
+        </div>
+        <div class="box" v-show="isShow" v-for="(v, i) in orders.length>0?orders:kList" :key="i">
+          <div v-if="isShow">
           <b class="iconfont icon-dingwei"></b>
           <div class="rightBox">
             <div class="userOrder">
@@ -58,6 +67,7 @@
               <p v-text="'订单创建时间:'+v.createdAt"></p>
             </div>
           </div>
+        </div>
         </div>
       </van-tab>
       <van-tab title="待收货"></van-tab>
@@ -82,6 +92,8 @@ export default {
       orders: [],
       shops: [],
       shopID: "",
+      isShow: false,
+      isShows: true,
       kList: [
         {
           title: "空空如也啊"
@@ -96,7 +108,10 @@ export default {
     const per = 10;
     const res = await findOrder(page, per);
     this.orders = res.orders;
+    console.log(this.orders)
     if (this.orders != 0) {
+      this.isShow = true
+      this.isShows = false
       this.orders.forEach(item => this.ordersID.push(item._id));
       this.ordersID.forEach(async item => {
         const ty = await findOrderShop(item);
@@ -254,5 +269,10 @@ export default {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+.noorder{
+  width: 100%;
+  height: 1437px;
+  background: rgb(248, 248, 248)
 }
 </style>

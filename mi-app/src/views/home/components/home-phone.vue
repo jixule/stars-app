@@ -80,7 +80,7 @@
           </van-swipe-item>
         </van-swipe>
       </div>
-
+      
       <div class="phone-character">
         <h2>品质推荐</h2>
         <div class="phone-character-img">

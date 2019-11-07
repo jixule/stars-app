@@ -158,6 +158,7 @@ body {
 
 .section_discover {
   flex: 1;
+
   overflow: auto;
   background: #f5f5f5;
 }

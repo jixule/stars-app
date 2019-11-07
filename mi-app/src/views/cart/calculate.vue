@@ -9,13 +9,13 @@
       <div class="calculate_site">
         <div>
           <div class="calculate_site_name">
-            <span>{{list.addresses[0].receiver}}</span>
-            <span>{{list.addresses[0].mobile}}</span>
-            <span>默认</span>
+            <span>{{list.addresses[0]?list.addresses[0].receiver:'新增地址'}}</span>
+            <span>{{list.addresses[0]?list.addresses[0].mobile:''}}</span>
+            <span v-show="list.addresses[0]?true:false">默认</span>
           </div>
           <p class="calculate_site_site">
-            <span>{{ list.addresses[0].regions}}</span>
-            <span>{{ list.addresses[0].address}}</span>
+            <span>{{ list.addresses[0]?list.addresses[0].regions:''}}</span>
+            <span>{{ list.addresses[0]?list.addresses[0].address:''}}</span>
           </p>
         </div>
         <p class="calculate_jiantou">
@@ -121,6 +121,9 @@ export default {
     this.num = nums;
     const ios = await CustomerAddress();
     this.list = ios;
+    console.log(ios);
+    if (this.list.length < 1) {
+    }
   },
   methods: {
     ctyue() {

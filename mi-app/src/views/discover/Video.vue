@@ -1,5 +1,5 @@
 <template>
-  <div class="stream">
+  <div class="stream detailsss">
     <div
       class="details"
       v-for="(v,i) in list"
@@ -69,5 +69,8 @@ export default {
   line-height: 49px;
   font-size: 33px;
   color: #4a4a4a;
+}
+.detailsss {
+  height: 100%;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="goods">
     <header class="goods_fixed">
-      <van-nav-bar title="商品详情" fixed left-arrow @click-left="back"></van-nav-bar>
+      <van-nav-bar title="商品详情" fixed left-arrow @click-left="$router.go(-1)"></van-nav-bar>
     </header>
     <section class="goods_sction">
       <van-swipe class="goods-swipe" :autoplay="3000">
@@ -107,9 +107,6 @@ export default {
     this.goods = obj;
   },
   methods: {
-    back() {
-      this.$router.go(-1); //返回上一层
-    },
     formatPrice() {
       if (this.goods.price) {
         return "¥" + this.goods.price.toFixed(2);
