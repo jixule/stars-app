@@ -115,21 +115,14 @@ return
 
 ```
 url
-  /send_sms
+  api/v1/send_sms
 method
   post
 params
   mobile 手机号
 return
 {
-    "reason": "短信发送成功",
-    "result": {
-        "count": 1, 发送数量
-        "fee": 1, 扣除条数
-        "sid": "23d6bc4913614919a823271d820662af" /*短信ID*/
-        "vCode":随机六位数
-    },
-    "error_code": 0 /*发送成功*/
+   
 }
 ```
 
